@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/704533a44e.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #position {
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: sticky;
+        }
+
+        #background {
+            background-color: #EEEEEE;
+        }
+
+        #navbar {
+            display: flex;
+            justify-content: space-around;
+            height: 30px;
+        }
+
+        #navbar > div:nth-child(1) {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 7px;
+            font-size: small;
+            color: grey;
+        }
+
+        #navbar > div:nth-child(1) > p:nth-child(1) {
+            margin-right: 15px;
+        }
+
+        #navbar > div:nth-child(1) > p:nth-child(2) {
+            margin-right: 15px;
+        }
+
+        #navbar > div:nth-child(1) > p:nth-child(4) {
+            margin-right: 15px;
+            margin-left: 5px;
+        }
+
+        #navbar > div:nth-child(1) > p:nth-child(5) {
+            margin-right: 15px;
+        }
+
+        #navbar > div:nth-child(2) {
+            display: flex;
+            margin-top: 7px;
+            font-size: small;
+            color: grey;
+        }
+
+        #navbar > div:nth-child(2) > p:nth-child(1) {
+            margin-right: 15px;
+        }
+
+        #navbar > div:nth-child(2) > p:nth-child(2) {
+            margin-right: 15px;
+        }
+
+        #background1 {
+            background-color: #FFFFFF;
+        }
+
+        #navbar1 {
+            display: flex;
+            justify-content: space-around;
+            height: 50px;
+            width: 90%;
+            margin: auto;
+        }
+
+        #navbarleft {
+            display: flex;
+        }
+
+        #navbarleft > div:nth-child(1) {
+            margin-right: 50px;
+            margin-top: 10px;
+        }
+
+        #navbarleft > div:nth-child(2) {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        #navbarleft > div:nth-child(2) > p {
+            margin-right: 15px;
+            font-weight: lighter;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+
+        #navbarright {
+            display: flex;
+        }
+
+        #navbarright > div:nth-child(1) {
+            display: flex;
+            margin-top: 5px;
+            background-color: #EEEEEE;
+            width: 280px;
+            height: 40px;
+            border-radius: 5px;
+        }
+
+        #navbarright > div:nth-child(1) > div:nth-child(1) {
+            margin-top: 10px;
+            margin-left: 7px;
+            color: gray;
+        }
+
+        #navbarright > div:nth-child(1) > div:nth-child(2) {
+            margin-left: 5px;
+            margin-top: 10px;
+            color: gray;
+            font-size: small;
+        }
+
+        #navbarright > div:nth-child(1) > div:nth-child(2) > input {
+            width: 240px;
+            outline: none;
+            border: none;
+            background-color: #EEEEEE;
+        }
+
+        #navbarright > div:nth-child(2) {
+            display: flex;
+        }
+
+        #navbarright > div:nth-child(2) > div:nth-child(1) {
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+
+        #navbarright > div:nth-child(2) > div:nth-child(2) {
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+
+        #navbarright > div:nth-child(2) > div:nth-child(3) {
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+
+        #navbarright > div:nth-child(2) > div:nth-child(4) {
+            width: 20%;
+            height: 70%;
+            margin-left: 15px;
+            margin-top: 10px;
+        }
+
+        #navbarright > div:nth-child(2) > div:nth-child(4) > img {
+            border-radius: 50%;
+        }
+
+        #border {
+            width: 100%;
+            border: 1px solid #E6E6E6;
+        }
+
+        #home {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        #home > div:nth-child(1) {
+            width: 77%;
+            margin: auto;
+            display: flex;
+        }
+
+        #home > div:nth-child(1) > p {
+            margin-left: 10px;
+            color: rgb(83, 81, 81);
+        }
+
+        #over {
+            width: 100%;
+            margin-top: 60px;
+        }
+
+        #over > div:nth-child(1) {
+            width: 77%;
+            margin: auto;
+            display: flex;
+        }
+
+        #over > div:nth-child(1) > div:nth-child(1) > p:nth-child(1) {
+            font-size: 28px;
+            font-weight: lighter;
+        }
+
+        #over > div:nth-child(1) > div:nth-child(1) > p:nth-child(2) {
+            border: 1px solid rgb(238, 238, 12);
+            width:35%;
+            margin-top: 5px;
+        }
+
+        #over > div:nth-child(1) > div:nth-child(2) {
+            font-size: 25px;
+            margin-left: 10px;
+            color: gray;
+        }
+
+        #filters {
+            width: 100%;
+            margin-top: 30px;
+        }
+
+        #filters > div:nth-child(1) {
+            width: 77%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #filters > div:nth-child(1) > div:nth-child(1) {
+            font-size: 14px;
+            color: gray;
+            top: 0;
+            left: 0;
+            position: sticky;
+        }
+
+        #filters > div:nth-child(1) > div:nth-child(2) {
+            display: flex;
+        }
+
+        #filters > div:nth-child(1) > div:nth-child(2) > p:nth-child(1) {
+            font-size: 14px;
+            color: gray;
+        }
+
+        #filters > div:nth-child(1) > div:nth-child(2) > p:nth-child(2) {
+            margin-left: 10px;
+            font-size: 14px;
+        }
+
+        #filters > div:nth-child(1) > div:nth-child(2) > i {
+            margin-left: 10px;
+        }
+
+        #tribe {
+            width: 100%;
+        }
+
+        #tribe > div:nth-child(1) {
+            width: 77%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        #brand {
+            width: 25%;
+            bottom: 0;
+            left: 0;
+            position: sticky;
+        }
+
+        #brand > div:nth-child(1) {
+            display: flex;
+            justify-content: space-between;
+            color: black;
+            font-size: 18px;
+        }
+
+        #brand > div:nth-child(2) {
+            border: 1px solid gray;
+            margin-top: 20px;
+            opacity: 0.3;
+        }
+
+        #brand > div:nth-child(3) {
+            display: flex;
+            justify-content: space-between;
+            color: black;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        #brand > div:nth-child(4) {
+            border: 1px solid gray;
+            margin-top: 20px;
+            opacity: 0.3;
+        }
+
+        #brand > div:nth-child(5) {
+            display: flex;
+            justify-content: space-between;
+            color: black;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        #brand > div:nth-child(6) {
+            border: 1px solid gray;
+            margin-top: 20px;
+            opacity: 0.3;
+        }
+
+        #brand > div:nth-child(7) {
+            display: flex;
+            justify-content: space-between;
+            color: black;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        #brand > div:nth-child(8) {
+            border: 1px solid gray;
+            margin-top: 20px;
+            opacity: 0.3;
+        }
+
+        #brand > div:nth-child(9) {
+            display: flex;
+            justify-content: space-between;
+            color: black;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        #brand > div:nth-child(10) {
+            border: 1px solid gray;
+            margin-top: 20px;
+            opacity: 0.3;
+        }
+
+        #brand > div:nth-child(11) {
+            display: flex;
+            justify-content: space-between;
+            color: black;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        #brand > div:nth-child(12) {
+            border: 1px solid gray;
+            margin-top: 20px;
+            opacity: 0.3;
+        }
+
+        #brand > div:nth-child(13) {
+            display: flex;
+            justify-content: space-between;
+            color: black;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        #brand > div:nth-child(14) {
+            border: 1px solid gray;
+            margin-top: 20px;
+            opacity: 0.3;
+        }
+
+        #brand > div:nth-child(15) {
+            display: flex;
+            justify-content: space-between;
+            color: black;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        #brand > div:nth-child(16) {
+            border: 1px solid gray;
+            margin-top: 20px;
+            opacity: 0.3;
+        }
+
+        #brand > div:nth-child(17) {
+            display: flex;
+            justify-content: space-between;
+            color: black;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        #brand > div:nth-child(18) {
+            border: 1px solid gray;
+            margin-top: 20px;
+            opacity: 0.3;
+        }
+
+        #brand > div:nth-child(19) {
+            display: flex;
+            justify-content: space-between;
+            color: black;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        #brand > div:nth-child(20) {
+            border: 1px solid gray;
+            margin-top: 20px;
+            opacity: 0.3;
+        }
+
+        #brand > div:nth-child(21) {
+            display: flex;
+            justify-content: space-between;
+            color: black;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        #brand > div:nth-child(22) {
+            border: 1px solid gray;
+            margin-top: 20px;
+            opacity: 0.3;
+        }
+
+        #brand > div:nth-child(23) {
+            display: flex;
+            justify-content: space-between;
+            color: black;
+            font-size: 18px;
+            margin-top: 15px;
+        }
+
+        #brand > div:nth-child(24) {
+            border: 1px solid gray;
+            margin-top: 20px;
+            opacity: 0.3;
+        }
+
+        .design {
+            width: 72%;
+            height: 500px;
+        }
+
+        .design > div:nth-child(1) {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .design > div:nth-child(1) > div:nth-child(1) {
+            width: 32%;
+            height: 370px;
+        }
+
+        .rupees1 {
+            display: flex;
+        }
+
+        .rupees1 > div:nth-child(2) {
+            margin-top: 20px;
+            margin-left: 15px;
+        }
+
+        .rupees > :nth-child(1) {
+            margin-top: 5px;
+            color: rgb(32, 31, 31);
+        }
+
+        .rupees > :nth-child(2) {
+            font-size: 14px;
+            color: gray;
+            margin-top: 3px;
+        }
+
+        .rupees > :nth-child(3) {
+            display: flex;
+            margin-top: 3px;
+        }
+
+        .rupees > :nth-child(3) > p:nth-child(1) {
+            font-size: 14px;
+            margin-top: 2px;
+        }
+
+        .rupees > :nth-child(3) > p:nth-child(2) {
+            margin-left: 3px;
+            font-size: 18px;
+        }
+
+        .rupees > :nth-child(3) > p:nth-child(3) {
+            margin-left: 3px;
+            color: gray;
+            text-decoration-line: line-through;
+            font-size: 14px;
+            margin-top: 2px;
+        }
+
+        .rupees > :nth-child(4) {
+            font-size: 14px;
+            margin-left: 7px;
+            margin-top: 3px;
+        }
+
+        .rupees > :nth-child(5) {
+            border: 1px solid gray;
+            width: 40%;
+            height: 20px;
+            font-size: 12px;
+            text-align: center;
+            padding-top: 5px;
+            margin-top: 3px;
+            color: gray;
+        }
+
+        .design > div:nth-child(1) > div:nth-child(2) {
+            width: 32%;
+            height: 370px;
+        }
+
+        .design > div:nth-child(1) > div:nth-child(3) {
+            width: 32%;
+            height: 370px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="screen">
+        <div id="position">
+            <div id="background">
+                <div id="navbar">
+                    <div>
+                        <p>Offers</p>
+                        <p>Fanbook</p>
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <p>Download App</p>
+                        <p>Tribe Membership</p>
+                    </div>
+                    <div>
+                        <p>Contact Us</p>
+                        <p>Track Order</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="background1">
+                <div id="navbar1">
+                    <div id="navbarleft">
+                        <div>
+                            <img style="width: 100%; height: 50%;" src="https://images.bewakoof.com/web/ic-desktop-bwkf-trademark-logo.svg"/>
+                        </div>
+                        <div>
+                            <p>MEN</p>
+                            <p>WOMEN</p>
+                            <p>MOBILE COVERS</p>
+                        </div>
+                    </div>
+                    <div id="navbarright">
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div>
+                                <input placeholder="Search by product category or collection"/>
+                            </div>
+                        </div>
+                        <div>
+                            <div>Login</div>
+                            <div>
+                                <i class="fa-regular fa-heart fa-xl"></i>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-lock fa-xl"></i>
+                            </div>
+                            <div>
+                                <img style="width: 100%; height: 100%;" src="https://uxwing.com/wp-content/themes/uxwing/download/flags-landmarks/india-flag-icon.png"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="border"></div>
+        </div>
+
+
+        <div id="home">
+            <div>
+                <p>Home</p>
+                <p>/</p>
+                <p>Men Clothing</p>
+                <p>/</p>
+                <p>Oversized T-shirts</p>
+                <p>/</p>
+                <p>Oversized T-shirts for Men</p>
+            </div>
+        </div>
+
+
+        <div id="over">
+            <div>
+                <div>
+                    <p><b>Oversized T-shirts for Men</b></p>
+                    <p></p>
+                </div>
+                <div>
+                    <p>(1268)</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="filters">
+            <div>
+                <div>
+                    <p>FILTERS</p>
+                </div>
+                <div>
+                    <p>SORT BY</p>
+                    <p>Popular</p>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="tribe">
+            <div>
+                <div id="brand">
+                    <div>
+                        <p>Gender</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div></div>
+                    <div>
+                        <p>Sizes</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div></div>
+                    <div>
+                        <p>Brand</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div></div>
+                    <div>
+                        <p>Color</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div></div>
+                    <div>
+                        <p>Design</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div></div>
+                    <div>
+                        <p>Fit</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div></div>
+                    <div>
+                        <p>Sleeve</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div></div>
+                    <div>
+                        <p>Neck</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div></div>
+                    <div>
+                        <p>Type</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div></div>
+                    <div>
+                        <p>Ratings</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div></div>
+                    <div>
+                        <p>Discount</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div></div>
+                    <div>
+                        <p>Sort By</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                    <div></div>
+                </div>
+
+
+                <div class="design">
+                    <div>
+                        <div>
+                            <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/t640/men-s-brown-don-t-care-graphic-print-oversized-t-shirt-609639-1691754783-1.jpg"/>
+                            <div class="rupees1">
+                            <div class="rupees">
+                                <p>Garfield X Bewakoof Merchandise</p>
+                                <p>Men's Brown Don't care Graphic</p>
+                                <div>
+                                    <p>₹</p>
+                                    <p>699</p>
+                                    <p>₹1799</p>
+                                </div>
+                                <p><b>₹649 for Tribe Members</b></p>
+                                <p><b>100% COTTON</b></p>
+                            </div>
+                            <div><i class="fa-regular fa-heart fa-xl" style="color: #a6a8ab;"></i></div>
+                            </div>
+                        </div>
+                        <div>
+                            <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/t640/men-s-purple-don-t-care-graphic-print-oversized-t-shirt-609640-1691753918-1.jpg"/>
+                            <div class="rupees1">
+                            <div class="rupees">
+                                <p>Garfield X Bewakoof Merchandise</p>
+                                <p>Men's Purple Don't care Graphic</p>
+                                <div>
+                                    <p>₹</p>
+                                    <p>649</p>
+                                    <p>₹1299</p>
+                                </div>
+                                <p><b>₹599 for Tribe Members</b></p>
+                                <p><b>100% COTTON</b></p>
+                            </div>
+                            <div><i class="fa-regular fa-heart fa-xl" style="color: #a6a8ab;"></i></div>
+                            </div>
+                        </div>
+                        <div>
+                            <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/t640/men-s-green-don-t-care-graphic-print-oversized-t-shirt-609642-1691753748-1.jpg"/>
+                            <div class="rupees1">
+                                <div class="rupees">
+                                    <p>Garfield X Bewakoof Merchandise</p>
+                                    <p>Men's Green Don't care Graphic</p>
+                                    <div>
+                                        <p>₹</p>
+                                        <p>649</p>
+                                        <p>₹1299</p>
+                                    </div>
+                                    <p><b>₹599 for Tribe Members</b></p>
+                                    <p><b>100% COTTON</b></p>
+                                </div>
+                                <div><i class="fa-regular fa-heart fa-xl" style="color: #a6a8ab;"></i></div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
