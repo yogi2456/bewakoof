@@ -1,0 +1,1124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/704533a44e.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #position {
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: sticky;
+        }
+
+        #background {
+            background-color: #EEEEEE;
+        }
+
+        #navbar {
+            display: flex;
+            justify-content: space-around;
+            height: 30px;
+        }
+
+        #navbar > div:nth-child(1) {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 7px;
+            font-size: small;
+            color: grey;
+        }
+
+        #navbar > div:nth-child(1) > p:nth-child(1) {
+            margin-right: 15px;
+        }
+
+        #navbar > div:nth-child(1) > p:nth-child(2) {
+            margin-right: 15px;
+        }
+
+        #navbar > div:nth-child(1) > p:nth-child(4) {
+            margin-right: 15px;
+            margin-left: 5px;
+        }
+
+        #navbar > div:nth-child(1) > p:nth-child(5) {
+            margin-right: 15px;
+        }
+
+        #navbar > div:nth-child(2) {
+            display: flex;
+            margin-top: 7px;
+            font-size: small;
+            color: grey;
+        }
+
+        #navbar > div:nth-child(2) > p:nth-child(1) {
+            margin-right: 15px;
+        }
+
+        #navbar > div:nth-child(2) > p:nth-child(2) {
+            margin-right: 15px;
+        }
+
+        #background1 {
+            background-color: #FFFFFF;
+        }
+
+        #navbar1 {
+            display: flex;
+            justify-content: space-around;
+            height: 50px;
+            width: 90%;
+            margin: auto;
+        }
+
+        #navbarleft {
+            display: flex;
+        }
+
+        #navbarleft > div:nth-child(1) {
+            margin-right: 50px;
+            margin-top: 10px;
+        }
+
+        #navbarleft > div:nth-child(2) {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        #navbarleft > div:nth-child(2) > p {
+            margin-right: 15px;
+            font-weight: lighter;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+
+        #navbarright {
+            display: flex;
+        }
+
+        #navbarright > div:nth-child(1) {
+            display: flex;
+            margin-top: 5px;
+            background-color: #EEEEEE;
+            width: 280px;
+            height: 40px;
+            border-radius: 5px;
+        }
+
+        #navbarright > div:nth-child(1) > div:nth-child(1) {
+            margin-top: 10px;
+            margin-left: 7px;
+            color: gray;
+        }
+
+        #navbarright > div:nth-child(1) > div:nth-child(2) {
+            margin-left: 5px;
+            margin-top: 10px;
+            color: gray;
+            font-size: small;
+        }
+
+        #navbarright > div:nth-child(1) > div:nth-child(2) > input {
+            width: 240px;
+            outline: none;
+            border: none;
+            background-color: #EEEEEE;
+        }
+
+        #navbarright > div:nth-child(2) {
+            display: flex;
+        }
+
+        #navbarright > div:nth-child(2) > div:nth-child(1) {
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+
+        #navbarright > div:nth-child(2) > div:nth-child(2) {
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+
+        #navbarright > div:nth-child(2) > div:nth-child(3) {
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+
+        #border {
+            width: 100%;
+            border: 1px solid #E6E6E6;
+        }
+
+        #newarrivals {
+            height: 550px;
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 7px;
+        }
+
+        #newarrivals > div:nth-child(1) {
+            width: 32%;
+            height: 550px;
+        }
+
+        #newarrivals > div:nth-child(2) {
+            width: 32%;
+            height: 550px;
+        }
+
+        #newarrivals > div:nth-child(3) {
+            width: 32%;
+            height: 550px;
+        }
+
+        #background2 {
+            background-color: #FFFFFF;
+        }
+
+        #images {
+            height: 290px;
+            width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+        }
+
+        #images > div:nth-child(1) {
+            width: 9%;
+            height: 180px;
+            margin-top: 20px;
+        }
+
+        #images > div:nth-child(1) > p {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        #images > div:nth-child(2) {
+            width: 9%;
+            height: 180px;
+            margin-top: 20px;
+        }
+
+        #images > div:nth-child(2) > p {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        #images > div:nth-child(3) {
+            width: 9%;
+            height: 180px;
+            margin-top: 20px;
+        }
+
+        #images > div:nth-child(3) > p {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        #images > div:nth-child(4) {
+            width: 9%;
+            height: 180px;
+            margin-top: 20px;
+        }
+
+        #images > div:nth-child(4) > p {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        #images > div:nth-child(5) {
+            width: 9%;
+            height: 180px;
+            margin-top: 20px;
+        }
+
+        #images > div:nth-child(5) > p {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        #images > div:nth-child(6) {
+            width: 9%;
+            height: 180px;
+            margin-top: 20px;
+        }
+
+        #images > div:nth-child(6) > p {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        #images > div:nth-child(7) {
+            width: 9%;
+            height: 180px;
+            margin-top: 20px;
+        }
+
+        #images > div:nth-child(7) > p {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        #images > div:nth-child(8) {
+            width: 9%;
+            height: 180px;
+            margin-top: 20px;
+        }
+
+        #images > div:nth-child(8) > p {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        #images > div:nth-child(9) {
+            width: 9%;
+            height: 180px;
+            margin-top: 20px;
+        }
+
+        #images > div:nth-child(9) > p {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        #printed {
+            width: 100%;
+            height: 390px;
+        }
+
+        #printed > div:nth-child(1) > h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        #printed > div:nth-child(2) {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #printed > div:nth-child(2) > div:nth-child(1) {
+            width: 17%;
+            height: 350px;
+        }
+
+        #printed > div:nth-child(2) > div:nth-child(2) {
+            width: 17%;
+            height: 350px;
+        }
+
+        #printed > div:nth-child(2) > div:nth-child(3) {
+            width: 17%;
+            height: 350px;
+        }
+
+        #printed > div:nth-child(2) > div:nth-child(4) {
+            width: 17%;
+            height: 350px;
+        }
+
+        #printed > div:nth-child(2) > div:nth-child(5) {
+            width: 17%;
+            height: 350px;
+        }
+
+        #printed > div:nth-child(2) > div:nth-child(6) {
+            width: 17%;
+            height: 350px;
+        }
+
+        #printed1 > div:nth-child(1) {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #printed1 > div:nth-child(1) > div:nth-child(1) {
+            width: 17%;
+            height: 350px;
+        }
+
+        #printed1 > div:nth-child(1) > div:nth-child(2) {
+            width: 17%;
+            height: 350px;
+        }
+
+        #printed1 > div:nth-child(1) > div:nth-child(3) {
+            width: 17%;
+            height: 350px;
+        }
+
+        #printed1 > div:nth-child(1) > div:nth-child(4) {
+            width: 17%;
+            height: 350px;
+        }
+
+        #printed1 > div:nth-child(1) > div:nth-child(5) {
+            width: 17%;
+            height: 350px;
+        }
+
+        #printed1 > div:nth-child(1) > div:nth-child(6) {
+            width: 17%;
+            height: 350px;
+        }
+
+        #tohot {
+            width: 100%;
+            height: 480px;
+        }
+
+        #tohot > div:nth-child(1) > h2 {
+            text-align: center;
+            letter-spacing: 2px;
+            margin-top: 20px;
+        }
+
+        #tohot > div:nth-child(2) {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #tohot > div:nth-child(2) > div:nth-child(1) {
+            width: 49%;
+            height: 440px;
+        }
+
+        #tohot > div:nth-child(2) > div:nth-child(1) > img {
+            margin-top: 5px;
+        }
+
+        #tohot > div:nth-child(2) > div:nth-child(2) {
+            width: 50%;
+            height: 445px;
+        }
+
+        #tohot1 {
+            width: 100%;
+            height: 460px;
+        }
+
+        #tohot1 > div:nth-child(1) {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #tohot1 > div:nth-child(1) > div:nth-child(1) {
+            width: 49%;
+            height: 440px;
+        }
+
+        #tohot1 > div:nth-child(1) > div:nth-child(1) > img {
+            margin-top: 15px;
+        }
+
+        #tohot1 > div:nth-child(1) > div:nth-child(2) {
+            width: 50%;
+            height: 440px;
+        }
+
+        #tohot1 > div:nth-child(1) > div:nth-child(2) > img {
+            margin-top: 15px;
+        }
+
+        #newarrival1 {
+            width: 100%;
+            height: 550px;
+            margin-top: 480px;
+        }
+
+        #newarrival1 > div:nth-child(1) {
+            text-align: center;
+            letter-spacing: 2px;
+        }
+
+        #newarrival1 > div:nth-child(2) {
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 10px;
+        }
+
+        #newarrival1 > div:nth-child(2) > div:nth-child(1) {
+            width: 32%;
+            height: 530px;
+        }
+
+        #newarrival1 > div:nth-child(2) > div:nth-child(2) {
+            width: 32%;
+            height: 530px;
+        }
+
+        #newarrival1 > div:nth-child(2) > div:nth-child(3) {
+            width: 32%;
+            height: 530px;
+        }
+
+        #our {
+            width: 100%;
+            height: 480px;
+            margin-top: 80px;
+        }
+
+        #our > div:nth-child(1) > h2 {
+            text-align: center;
+            letter-spacing: 2px;
+            margin-top: 20px;
+        }
+
+        #our > div:nth-child(2) {
+            display: flex;
+            justify-content: space-evenly;
+            padding-top: 10px;
+        }
+
+        #our > div:nth-child(2) > div:nth-child(1) {
+            width: 49%;
+            height: 440px;
+        }
+
+        #our > div:nth-child(2) > div:nth-child(1) > img {
+            margin-top: 5px;
+        }
+
+        #our > div:nth-child(2) > div:nth-child(2) {
+            width: 50%;
+            height: 445px;
+        }
+
+        #our1 {
+            width: 100%;
+            height: 460px;
+        }
+
+        #our1 > div:nth-child(1) {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #our1 > div:nth-child(1) > div:nth-child(1) {
+            width: 49%;
+            height: 440px;
+        }
+
+        #our1 > div:nth-child(1) > div:nth-child(1) > img {
+            margin-top: 15px;
+        }
+
+        #our1 > div:nth-child(1) > div:nth-child(2) {
+            width: 50%;
+            height: 445px;
+        }
+
+        #our1 > div:nth-child(1) > div:nth-child(2) > img {
+            margin-top: 10px;
+        }
+
+        #vote {
+            margin-top: 470px;
+        }
+
+        #vote1 {
+            margin-top: 8px;
+        }
+
+        #footer {
+            background-color: black;
+            height: 500px;
+            width: 100%;
+        }
+
+        #footer > div:nth-child(1) > h1 {
+            color: #fdd835;
+            width: 75%;
+            margin: auto;
+            padding-top: 80px;
+            font-size: 26px;
+        }
+
+        #footer > div:nth-child(2) {
+            display: flex;
+            width: 75%;
+            margin: auto;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        #service > h3 {
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #FDD835;
+        }
+
+        #service > p {
+            color: white;
+        }
+
+        #service > :nth-child(6) {
+            margin-top: 60px;
+            color: white;
+            display: flex;
+        }
+
+        #service > :nth-child(6) > i {
+            font-size: 12px;
+            margin-top: 5px;
+            margin-left: 5px;
+        }
+
+        #service > :nth-child(6) > p {
+            margin-left: 15px;
+        }
+
+        #service > :nth-child(7) {
+            margin-top: 10px;
+            color: white;
+            margin-left: 35px;
+        }
+
+        #company > h3 {
+            margin-bottom: 20px;
+            font-size: 14px;
+            color: #FDD835;
+        }
+
+        #company > p {
+            color: white;
+        }
+
+        #company > :nth-child(7) {
+            color: #FDD835;
+            margin-top: 35px;
+        }
+
+        #company1 {
+            display: flex;
+        }
+
+        #company1 > div:nth-child(1) {
+            display: flex;
+            margin-top: 20px;
+            border: 1px solid white;
+            border-radius: 5px;
+            width: 120px;
+        }
+
+        #company1 > div:nth-child(1) > div:nth-child(1) {
+            color: white;
+            margin-top: 8px;
+            margin-left: 10px;
+        }
+
+        #company1 > div:nth-child(1) > div:nth-child(2) {
+            color: white;
+            margin-left: 5px;
+        }
+
+        #company1 > div:nth-child(1) > div:nth-child(2) > p:nth-child(1) {
+            font-size: 10px;
+            margin-top: 5px;
+        }
+
+        #company1 > div:nth-child(1) > div:nth-child(2) > p:nth-child(2) {
+            margin-bottom: 5px;
+        }
+
+        #company1 > div:nth-child(2) {
+            display: flex;
+            margin-top: 20px;
+            border: 1px solid white;
+            border-radius: 5px;
+            width: 120px;
+            margin-left: 10px;
+        }
+
+        #company1 > div:nth-child(2) > div:nth-child(1) {
+            color: white;
+            margin-top: 8px;
+            margin-left: 10px;
+        }
+
+        #company1 > div:nth-child(2) > div:nth-child(2) {
+            color: white;
+            margin-left: 10px;
+        }
+
+        #company1 > div:nth-child(2) > div:nth-child(2) > p:nth-child(1) {
+            font-size: 10px;
+            margin-top: 5px;
+        }
+
+        #company1 > div:nth-child(2) > div:nth-child(2) > p:nth-child(2) {
+            margin-bottom: 5px;
+        }
+
+        #connect > h3 {
+            color: #FDD835;
+            font-size: 14px;
+        }
+
+        #connect > :nth-child(2) {
+            display: flex;
+            color: white;
+            margin-top: 20px;
+        }
+
+        #connect > :nth-child(2) > p {
+            margin-left: 5px;
+        }
+
+        #connect > :nth-child(3) {
+            display: flex;
+            color: white;
+            margin-top: 10px;
+        }
+
+        #connect > :nth-child(3) > p {
+            margin-left: 5px;
+        }
+
+        #connect > :nth-child(4) {
+            display: flex;
+            color: white;
+            margin-top: 15px;
+        }
+
+        #connect > :nth-child(4) > div:nth-child(2) {
+            margin-left: 25px;
+        }
+
+        #connect > :nth-child(4) > div:nth-child(3) {
+            margin-left: 25px;
+        }
+
+        #connect > :nth-child(4) > div:nth-child(4) {
+            margin-left: 25px;
+        }
+
+        #connect > :nth-child(5) {
+            color: #FDD835;
+            margin-top: 37px;
+        }
+
+        #connect > :nth-child(6) {
+            display: flex;
+            color: white;
+            margin-top: 30px;
+        }
+
+        #connect > :nth-child(6) > div:nth-child(2) {
+            margin-left: 8px;
+        }
+
+        #connect > :nth-child(6) > div:nth-child(3) {
+            margin-left: 8px;
+        }
+
+        #connect > :nth-child(6) > div:nth-child(4) {
+            margin-left: 8px;
+        }
+
+        #keep > h3 {
+            color: #FDD835;
+            font-size: 14px;
+        }
+
+        #keep > :nth-child(2) {
+            display: flex;
+        }
+
+        #keep > :nth-child(2) > div:nth-child(1) > p {
+            color: #757575;
+            margin-top: 40px;
+            margin-left: 10px;
+        }
+
+        #keep > :nth-child(2) > div:nth-child(2) {
+            background-color: #FDD835;
+            width: 150px;
+            margin-top: 35px;
+            margin-left: 40px;
+            padding-top: 8px;
+            height: 30px;
+            text-align: center;
+        }
+
+        #keep > :nth-child(3) {
+            border: 1px solid #FDD835;
+        }
+
+        #footer > div:nth-child(3) {
+            width: 75%;
+            margin: auto;
+            border: 1px solid #979797;
+            margin-top: 30px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="screen">
+        <div id="position">
+            <div id="background">
+                <div id="navbar">
+                    <div>
+                        <p>Offers</p>
+                        <p>Fanbook</p>
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <p>Download App</p>
+                        <p>Tribe Membership</p>
+                    </div>
+                    <div>
+                        <p>Contact Us</p>
+                        <p>Track Order</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="background1">
+                <div id="navbar1">
+                    <div id="navbarleft">
+                        <div>
+                            <img style="width: 100%; height: 50%;" src="https://images.bewakoof.com/web/ic-desktop-bwkf-trademark-logo.svg"/>
+                        </div>
+                        <div>
+                            <p>MEN</p>
+                            <p>WOMEN</p>
+                            <p>MOBILE COVERS</p>
+                        </div>
+                    </div>
+                    <div id="navbarright">
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div>
+                                <input placeholder="Search by product category or collection"/>
+                            </div>
+                        </div>
+                        <div>
+                            <div>Login</div>
+                            <div>
+                                <i class="fa-regular fa-heart fa-xl"></i>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-lock fa-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="border"></div>
+        </div>
+
+
+        <div id="newarrivals">
+            <div>
+                <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/Revision-DOTW-1x1-Banner-Homepage-Men-1692266495.jpg"/>
+            </div>
+            <div>
+                <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/newbanner-1x1-OversiedGraphicPrintedTees-Men-outdoor-1692278401.jpg"/>
+            </div>
+            <div>
+                <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/1X1-vest-1692096026.jpg"/>
+            </div>
+        </div>
+
+
+        <div id="background2">
+            <div id="images">
+                <div>
+                    <img style="width: 105%; height: 90%;" src="https://images.bewakoof.com/uploads/grid/app/thumbnail-icon-Men-1692079603.jpg"/>
+                    <p><b>Designs of the Week</b></p>
+                </div>
+                <div>
+                    <img style="width: 105%; height: 90%;" src="https://images.bewakoof.com/uploads/grid/app/new-thumbnail-icon-2022-D-230x320-new-arrivals-m-1682570369.jpg"/>
+                    <p><b>New Arrivals</b></p>
+                </div>
+                <div>
+                    <img style="width: 105%; height: 90%;" src="https://images.bewakoof.com/uploads/grid/app/new-thumbnail-icon-2022-D-230x320-bestsellers-m-1682570369.jpg"/>
+                    <p><b>Bestsellers</b></p>
+                </div>
+                <div>
+                    <img style="width: 105%; height: 90%;" src="https://images.bewakoof.com/uploads/grid/app/new-thumbnail-icon-2022-D-230x320-official-collab-m-1682570371.jpg"/>
+                    <p><b>Official Merch</b></p>
+                </div>
+                <div>
+                    <img style="width: 105%; height: 90%;" src="https://images.bewakoof.com/uploads/grid/app/new-thumbnail-icon-2022-D-230x320-old-version-1687926487.jpg"/>
+                    <p><b>Customization</b></p>
+                </div>
+                <div>
+                    <img style="width: 105%; height: 90%;" src="https://images.bewakoof.com/uploads/grid/app/vote-thumbnail-1668491219.jpg"/>
+                    <p><b>Vote for Designs</b></p>
+                </div>
+                <div>
+                    <img style="width: 105%; height: 90%;" src="https://images.bewakoof.com/uploads/grid/app/last-size-new-thumbnaik-1668491212.jpg"/>
+                    <p><b>Last Sizes Left</b></p>
+                </div>
+                <div>
+                    <img style="width: 105%; height: 90%;" src="https://images.bewakoof.com/uploads/grid/app/new-thumbnail-icon-2022-D-230x320-plus-size-m-1682570372.jpg"/>
+                    <p><b>Plus Size</b></p>
+                </div>
+                <div>
+                    <img style="width: 105%; height: 90%;" src="https://images.bewakoof.com/uploads/grid/app/image-1668598708.png"/>
+                    <p><b>Coupon Offers</b></p>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="printed">
+                <div>
+                    <h2>TRENDING CATEGORIES</h2>
+                </div>
+                <div>
+                    <div>
+                        <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/category-box-printed-tees-m-1684997505.jpg"/>
+                    </div>
+                    <div>
+                        <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/category-box-new-240x350-men-fullsleeve-1686063034.jpg"/>
+                    </div>
+                    <div>
+                        <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/category-box-oversized-tees-m-1685086219.jpg"/>
+                    </div>
+                    <div>
+                        <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/category-box-new-240x350-men-vests-1686063036.jpg"/>
+                    </div>
+                    <div>
+                        <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/category-box-joggers-m-1684997505.jpg"/>
+                    </div>
+                    <div>
+                        <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/category-box-new-men-combos-1684308339.jpg"/>
+                    </div>
+                </div>
+        </div>
+
+
+        <div id="printed1">
+            <div>
+                <div>
+                    <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/category-box-new-240x350-men-shorts-1686063035.jpg"/>
+                </div>
+                <div>
+                    <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/category-box--m-pyjama-1685086220.jpg"/>
+                </div>
+                <div>
+                    <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/category-box-new-240x350-men-jeans-1686063035.jpg"/>
+                </div>
+                <div>
+                    <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/category-box-boxers-1685086219.jpg"/>
+                </div>
+                <div>
+                    <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/category-box-co-ords-m-1681815598.jpg"/>
+                </div>
+                <div>
+                    <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/category-box-new-240x350-men-sshirts-1686063036.jpg"/>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="tohot">
+            <div>
+                <h2>TOO HOT TO BE MISSED</h2>
+            </div>
+            <div>
+                <div>
+                    <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/DESKTOP-MIDSIZE-BANNER-DC-1692267822.jpg"/>
+                </div>
+                <div>
+                    <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/new-mid-banner-cottonpyjamas-m-1692101080.jpg"/>
+                </div>
+            </div>
+
+            <div id="tohot1">
+                <div>
+                    <div>
+                        <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/new-mid-banner-2023-desktop-solidTee-men-new--1--1689061311.jpg"/>
+                    </div>
+                    <div>
+                        <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/Casual-Shoes-desktop-mid-size-banner-1692001770.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <div id="newarrival1">
+            <div>
+                <h2>BEST OF BEWAKOOF</h2>
+            </div>
+            <div>
+                <div>
+                    <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/1x1-casual-pants-m--1--1692102134.jpg"/>
+                </div>
+                <div>
+                    <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/new-banner-1x1-mens-shorts-1692101784.jpg"/>
+                </div>
+                <div>
+                    <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/newbanner-1x1-PrintedOversizedFullTee-1692097452.jpg"/>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="our">
+            <div>
+                <h2>OUR BEST PICKS</h2>
+            </div>
+            <div>
+                <div>
+                    <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/new-mid-banner-comfortboxers-m-1692101943.jpg"/>
+                </div>
+                <div>
+                    <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/desktop-mid-size-banner-Air-men--1--1692102038.jpg"/>
+                </div>
+            </div>
+
+            <div id="our1">
+                <div>
+                    <div>
+                        <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/mid-size-hygiene-revamp-customise-men-desktop-new-1689142925.jpg"/>
+                    </div>
+                    <div>
+                        <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/plus-size-common-1683622044.jpg"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="vote">
+            <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/Desktop-Strip-2-1672040129.jpg"/>
+        </div>
+
+
+
+        <div id="vote1">
+            <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/uploads/grid/app/Desktop-Strip-3-1669022420.jpg"/>
+        </div>
+
+
+
+        <div id="footer">
+            <div>
+                <h1>Bewakoof®</h1>
+            </div>
+            <div>
+                <div id="service">
+                    <h3>CUSTOMER SERVICE</h3>
+                    <p>Contact Us</p>
+                    <p>Track Order</p>
+                    <p>Return Order</p>
+                    <p>Cancel Order</p>
+                    <div>
+                        <i class="fa-solid fa-rotate-left"></i>
+                        <p>15 Days return policy*</p>
+                    </div>
+                    <p>Cash on delivery</p>
+                </div>
+
+                <div id="company">
+                    <h3>COMPANY</h3>
+                    <p>About Us</p>
+                    <p>We're Hiring</p>
+                    <p>Terms & Conditions</p>
+                    <p>Privacy Policy</p>
+                    <p>Blog</p>
+                    <p>DOWNLOAD THE APP</p>
+                    <div id="company1">
+                        <div>
+                            <div>
+                                <i class="fa-brands fa-google-play"></i>
+                            </div>
+                            <div>    
+                                <p>GET IT ON</p>
+                                <p>Google Play</p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <i class="fa-brands fa-app-store-ios"></i>
+                            </div>
+                            <div>    
+                                <p>Download on the</p>
+                                <p>App Store</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="connect">
+                    <h3>CONNECT WITH US</h3>
+                    <div>
+                        <i class="fa-brands fa-facebook"></i>
+                        <p>4.7M People Like this</p>
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-instagram"></i>
+                        <p>1M Followers</p>
+                    </div>
+                    <div>
+                        <div><i class="fa-brands fa-twitter"></i></div>
+                        <div><i class="fa-brands fa-pinterest"></i></div>
+                        <div><i class="fa-brands fa-snapchat"></i></div>
+                        <div><i class="fa-brands fa-apple"></i></div>
+                    </div>
+                    <p>100% Secure Payment</p>
+                    <div>
+                        <div>
+                            <i class="fa-brands fa-cc-visa"></i>
+                        </div>
+                        <div>
+                            <i class="fa-brands fa-paypal"></i>
+                        </div>
+                        <div>
+                            <i class="fa-brands fa-google-pay"></i>
+                        </div>
+                        <div>
+                            <i class="fa-brands fa-amazon-pay"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="keep">
+                    <h3>KEEP UP TO DATE</h3>
+                    <div>
+                        <div>
+                            <p>Enter Email Id</p>
+                        </div>
+                        <div>SUBSCRIBE</div>
+                    </div>
+                    <div></div>
+                </div>
+            </div>
+
+            <div></div>
+
+        </div>
+        
+    </div>        
+</body>
+</html>
