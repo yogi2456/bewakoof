@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/704533a44e.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* #position {
+            width: 100%;
+            top: 0;
+            left: 0;
+            position: sticky;
+        } */
+
+        #background {
+            background-color: #EEEEEE;
+        }
+
+        #navbar {
+            display: flex;
+            justify-content: space-around;
+            height: 30px;
+        }
+
+        #navbar > div:nth-child(1) {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 7px;
+            font-size: small;
+            color: grey;
+        }
+
+        #navbar > div:nth-child(1) > p:nth-child(1) {
+            margin-right: 15px;
+        }
+
+        #navbar > div:nth-child(1) > p:nth-child(2) {
+            margin-right: 15px;
+        }
+
+        #navbar > div:nth-child(1) > p:nth-child(4) {
+            margin-right: 15px;
+            margin-left: 5px;
+        }
+
+        #navbar > div:nth-child(1) > p:nth-child(5) {
+            margin-right: 15px;
+        }
+
+        #navbar > div:nth-child(2) {
+            display: flex;
+            margin-top: 7px;
+            font-size: small;
+            color: grey;
+        }
+
+        #navbar > div:nth-child(2) > p:nth-child(1) {
+            margin-right: 15px;
+        }
+
+        #navbar > div:nth-child(2) > p:nth-child(2) {
+            margin-right: 15px;
+        }
+
+        #background1 {
+            background-color: #FFFFFF;
+        }
+
+        #navbar1 {
+            display: flex;
+            justify-content: space-around;
+            height: 50px;
+            width: 90%;
+            margin: auto;
+        }
+
+        #navbarleft {
+            display: flex;
+        }
+
+        #navbarleft > div:nth-child(1) {
+            margin-right: 50px;
+            margin-top: 10px;
+        }
+
+        #navbarleft > div:nth-child(2) {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        #navbarleft > div:nth-child(2) > p {
+            margin-right: 15px;
+            font-weight: lighter;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+
+        #navbarright {
+            display: flex;
+        }
+
+        #navbarright > div:nth-child(1) {
+            display: flex;
+            margin-top: 5px;
+            background-color: #EEEEEE;
+            width: 280px;
+            height: 40px;
+            border-radius: 5px;
+        }
+
+        #navbarright > div:nth-child(1) > div:nth-child(1) {
+            margin-top: 10px;
+            margin-left: 7px;
+            color: gray;
+        }
+
+        #navbarright > div:nth-child(1) > div:nth-child(2) {
+            margin-left: 5px;
+            margin-top: 10px;
+            color: gray;
+            font-size: small;
+        }
+
+        #navbarright > div:nth-child(1) > div:nth-child(2) > input {
+            width: 240px;
+            outline: none;
+            border: none;
+            background-color: #EEEEEE;
+        }
+
+        #navbarright > div:nth-child(2) {
+            display: flex;
+        }
+
+        #navbarright > div:nth-child(2) > div:nth-child(1) {
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+
+        #navbarright > div:nth-child(2) > div:nth-child(2) {
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+
+        #navbarright > div:nth-child(2) > div:nth-child(3) {
+            margin-left: 15px;
+            margin-top: 15px;
+        }
+
+        #border {
+            width: 100%;
+            border: 1px solid #E6E6E6;
+        }
+
+        #login {
+            width: 100%;
+            height: 630px;
+            border: 1px solid black;
+            margin-top: 10px;
+            display: flex;
+            justify-content: space-between;
+            position: fixed;
+        }
+
+        #image {
+            width: 50%;
+            height: 630px;
+            border: 1px solid red;
+            background-color: rgb(235, 235, 197);
+        }
+
+        #image > p {
+            width: 100%;
+            height: 200px;
+            font-size: 40px;
+            padding-left: 50px;
+            padding-top: 30px;
+        }
+
+        /* #image > h1 {
+            width: 100%;
+            height: 50px;
+            background-col: #FFFCED;
+        } */
+
+        #image > div {
+            width: 100%;
+            height: 380px;
+        }
+
+        #signup {
+            width: 50%;
+            height: 630px;
+            border: 1px solid pink;
+        }
+
+        #signup > h2 {
+            font-size: 25px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        #signup > p {
+            font-size: 20px;
+            text-align: center;
+            margin-top: 25px;
+            color: gray;
+        }
+
+        #enter {
+            width: 50%;
+            margin: auto;
+            height: 60px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            margin-top: 70px;
+            display: flex;
+            align-items: center;
+        }
+
+        #enter > div:nth-child(1) {
+            width: 80px;
+            height: 40px;
+            background-color: #F5F5F5;
+            margin-left: 20px;
+            display: flex;
+        }
+
+        #enter > div:nth-child(1) > div:nth-child(1) {
+            width: 50%;
+            height: 50%;
+            padding-top: 20px;
+        }
+
+        #enter > div:nth-child(1) > div:nth-child(2) {
+            border: none;
+            outline: none;
+            margin-left: 5px;
+        }
+
+        #continue {
+            width: 50%;
+            margin: auto;
+            height: 60px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            margin-top: 20px;
+            background-color: #42A2A2;
+        }
+
+        #continue > p {
+            font-size: 25px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        #or {
+            width: 70%;
+            margin: auto;
+            display: flex;
+        }
+
+        #or > p:nth-child(1) {
+            border: 1px solid gray;
+            width: 40%;
+            height: 0;
+            margin-top: 40px;
+        }
+
+        #or > p:nth-child(2) {
+            margin-left: 5px;
+            margin-top: 30px;
+            font-size: 20px;
+        }
+
+        #or > p:nth-child(3) {
+            border: 1px solid gray;
+            margin-left: 5px;
+            width: 50%;
+            height: 0;
+            margin-top: 40px;
+        }
+
+        #email {
+            width: 45%;
+            margin: auto;
+            height: 40px;
+            border: 1px solid gray;
+            margin-top: 30px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        #email > div:nth-child(1) {
+            margin-left: 70px;
+        }
+
+        #email > div:nth-child(2) {
+            margin-left: 10px;
+        }
+
+        #gofa {
+            width: 45%;
+            margin: auto;
+            height: 40px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        #gofa > div:nth-child(1) {
+            width: 48%;
+            height: 40px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        #gofa > div:nth-child(1) > div:nth-child(1) {
+            margin-left: 35px;
+        }
+
+        #gofa > div:nth-child(1) > div:nth-child(2) {
+            margin-left: 10px;
+        }
+
+        #gofa > div:nth-child(2) {
+            width: 48%;
+            height: 40px;
+            border: 1px solid gray;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        #gofa > div:nth-child(2) > div:nth-child(1) {
+            margin-left: 35px;
+        }
+
+        #gofa > div:nth-child(2) > div:nth-child(2) {
+            margin-left: 10px;
+        }
+
+        #create {
+            width: 50%;
+            margin: auto;
+        }
+
+        #create > p {
+            margin-top: 30px;
+            font-size: 14px;
+        }
+    </style>    
+</head>
+<body>
+    <div id="screen">
+        <div id="position">
+            <div id="background">
+                <div id="navbar">
+                    <div>
+                        <p>Offers</p>
+                        <p>Fanbook</p>
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                        <p>Download App</p>
+                        <p>Tribe Membership</p>
+                    </div>
+                    <div>
+                        <p>Contact Us</p>
+                        <p>Track Order</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="background1">
+                <div id="navbar1">
+                    <div id="navbarleft">
+                        <div>
+                            <img style="width: 100%; height: 50%;" src="https://images.bewakoof.com/web/ic-desktop-bwkf-trademark-logo.svg"/>
+                        </div>
+                        <div>
+                            <p><a style="text-decoration-line: none; color: black;" href="mens1.html" target="_blank">MEN</a></p>
+                            <p>WOMEN</p>
+                            <p>MOBILE COVERS</p>
+                        </div>
+                    </div>
+                    <div id="navbarright">
+                        <div>
+                            <div>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                            <div>
+                                <input placeholder="Search by product category or collection"/>
+                            </div>
+                        </div>
+                        <div>
+                            <div>Login</div>
+                            <div>
+                                <i class="fa-regular fa-heart fa-xl"></i>
+                            </div>
+                            <div>
+                                <i class="fa-solid fa-lock fa-xl"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="border"></div>
+        </div>
+
+        <div id="login">
+            <div id="image">
+                <p><b>Welcome to the world of Bewakoof®!</b></p>
+                <!-- <h1></h1> -->
+                <div>
+                    <img style="width: 100%; height: 100%;" src="https://images.bewakoof.com/web/group-19-1617704502.png"/>
+                </div>
+            </div>
+            <div id="signup">
+                <h2><b>Log in / Sign up</b></h2>
+                <p>for Latest trends, exciting offers and everything Bewakoof®!</p>
+                <div id="enter">
+                    <div>
+                        <div>
+                            <img style="width: 100%; height: 100%; border-radius: 50%;" src="https://cdn.pixabay.com/photo/2018/01/21/14/36/indian-flag-3096740_640.png"/>
+                        </div>
+                        <div>
+                            <select>
+                                <option>+ 91</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>Enter Mobile Number</div>
+                </div>
+                <div id="continue">
+                    <p>CONTINUE</p>
+                </div>
+                <div id="or">
+                    <p></p>
+                    <p>OR</p>
+                    <p></p>
+                </div>
+                <div id="email">
+                    <div><i class="fa-regular fa-envelope" style="color: #74777b;"></i></div>
+                    <div><b>CONTINUE WITH EMAIL</b></div>
+                </div>
+                <div id="gofa">
+                    <div>
+                        <div><i class="fa-brands fa-google" style="color: #1558d5;"></i></div>
+                        <div><b>GOOGLE</b></div>
+                    </div>
+                    <div>
+                        <div><i class="fa-brands fa-facebook" style="color: #2d68cd;"></i></div>
+                        <div>FACEBOOK</div>
+                    </div>
+                </div>
+                <div id="create">
+                    <p>By creating an account or logging in, you agree with Bewakoof®'s Terms and Conditons and Privacy Policy</p>
+                </div>
+            </div>
+        </div>
+    </div>    
+            
+</body>
+</html>
